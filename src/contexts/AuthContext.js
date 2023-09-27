@@ -1,5 +1,5 @@
 import React , {useContext,useState} from "react"
-
+import { auth } from "../Firebase"
 const AuthContext = React.createContext()
 export function useAuth(){
 return useContext(AuthContext)
@@ -7,6 +7,9 @@ return useContext(AuthContext)
 
 export function AuthProvider({children}){
     const [currentUser,setCurrentUser] = useState()
+
+function login(email , password)
+
     const value = {
         currentUser
     }
