@@ -8,7 +8,9 @@ return useContext(AuthContext)
 export function AuthProvider({children}){
     const [currentUser,setCurrentUser] = useState()
 
-function login(email , password)
+function Signup(email , password){
+   return auth.createUserWithEmailAndPassword(email , password)
+}
 
     const value = {
         currentUser
